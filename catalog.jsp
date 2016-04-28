@@ -5,6 +5,14 @@
 
 <jsp:useBean id="cart" scope="session" class="mypack.ShoppingCart"/>
 
+<%
+	if(cart.getLogined()==0) {
+		%>
+		<jsp:forward page="login.jsp" />
+		<%
+	}
+%>
+
 <html>
 <head><title>BookCatalog</title></head>
  <%@ include file="banner.jsp" %>

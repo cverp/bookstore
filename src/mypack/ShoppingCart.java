@@ -5,6 +5,15 @@ import java.util.*;
 public class ShoppingCart {
   HashMap items = null;
   int numberOfItems = 0;
+  int logined = 0;
+  
+  public int getLogined() {
+	  return logined;
+  }
+  
+  public void setLogined(int l) {
+	  logined = l;
+  }
 
   public ShoppingCart() {
       items = new HashMap();

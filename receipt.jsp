@@ -6,6 +6,14 @@
 <jsp:useBean id="cart" scope="session" class="mypack.ShoppingCart"/>
 
 <%
+	if(cart.getLogined()==0) {
+		%>
+		<jsp:forward page="login.jsp" />
+		<%
+	}
+%>
+
+<%
     bookDB.buyBooks(cart);
     // Payment received -- invalidate the session
    session.invalidate();
