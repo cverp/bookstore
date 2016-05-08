@@ -19,7 +19,7 @@ if(username!=null && password!=null &&username!="" &&password!="") {
 <form action="login.jsp" method="post" >
 <table>
 <tr>
-	<td>密码：</td>
+	<td>用户名：</td>
 	<td><input type="text" name="username" size="25"</td>
 </tr>
 <tr>
