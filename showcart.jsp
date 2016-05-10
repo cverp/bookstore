@@ -1,9 +1,8 @@
-<%@ page contentType="text/html; charset=GB2312" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 
 <%@ include file="common.jsp" %>
 <%@ page import="java.util.*" %>
 
-<jsp:useBean id="cart" scope="session" class="mypack.ShoppingCart"/>
 
 <html>
 <head><title>TitleShoppingCart</title></head>
@@ -15,7 +14,7 @@
     BookDetails book = bookDB.getBookDetails(bookId);
 %>
 
-<font color="red" size="+2">ÄúÉ¾³ıÁËÒ»±¾Êé£º<em><%=convert(book.getTitle())%>
+<font color="red" size="+2">æ‚¨åˆ é™¤äº†ä¸€æœ¬ä¹¦ï¼š<em><%=convert(book.getTitle())%>
 </em>
 <br>&nbsp;<br>
 </font>
@@ -28,7 +27,7 @@ if (request.getParameter("Clear") != null) {
 %>
 
 <font color="red" size="+2"><strong>
-Çå¿Õ¹ºÎï³µ
+æ¸…ç©ºè´­ç‰©è½¦
 </strong><br>&nbsp;<br></font>
 
 <%
@@ -38,14 +37,14 @@ if (request.getParameter("Clear") != null) {
   if (num > 0) {
 %>
 
-<font size="+2">ÄúµÄ¹ºÎï³µÄÚÓĞ<%=num%>±¾Êé
+<font size="+2">æ‚¨çš„è´­ç‰©è½¦å†…æœ‰<%=num%>æœ¬ä¹¦
 </font><br>&nbsp;
 
 <table>
 <tr>
-<th align=left>ÊıÁ¿</th>
-<th align=left>ÊéÃû</th>
-<th align=left>¼Û¸ñ</th>
+<th align=left>æ•°é‡</th>
+<th align=left>ä¹¦å</th>
+<th align=left>ä»·æ ¼</th>
 </tr>
 
 <%
@@ -71,7 +70,7 @@ if (request.getParameter("Clear") != null) {
 
 <td bgcolor="#ffffaa">
 <strong>
-<a href="<%=request.getContextPath()%>/showcart.jsp?Remove=<%=book.getBookId()%>">É¾³ı</a></strong>
+<a href="<%=request.getContextPath()%>/showcart.jsp?Remove=<%=book.getBookId()%>">åˆ é™¤</a></strong>
 </td></tr>
 
 <%
@@ -82,7 +81,7 @@ if (request.getParameter("Clear") != null) {
 <tr><td colspan="5" bgcolor="#ffffff"><br></td></tr>
 
 <tr>
-<td colspan="2" align="right" bgcolor="#ffffff">×Ü¶î(Ôª)</td>
+<td colspan="2" align="right" bgcolor="#ffffff">æ€»é¢(å…ƒ)</td>
 <td bgcolor="#ffffaa" align="right"><%=cart.getTotal()%></td>
 <td><br></td>
 </tr>
@@ -90,16 +89,16 @@ if (request.getParameter("Clear") != null) {
 </table>
 
 <p>&nbsp;<p>
-<strong><a href="<%=request.getContextPath()%>/catalog.jsp">¼ÌĞø¹ºÎï</a>&nbsp;&nbsp;&nbsp;
-<a href="<%=request.getContextPath()%>/cashier.jsp">¸¶ÕË</a>&nbsp;&nbsp;&nbsp;
-<a href="<%=request.getContextPath()%>/showcart.jsp?Clear=clear">Çå¿Õ¹ºÎï³µ</a></strong>
+<strong><a href="<%=request.getContextPath()%>/catalog.jsp">ç»§ç»­è´­ç‰©</a>&nbsp;&nbsp;&nbsp;
+<a href="<%=request.getContextPath()%>/cashier.jsp">ä»˜è´¦</a>&nbsp;&nbsp;&nbsp;
+<a href="<%=request.getContextPath()%>/showcart.jsp?Clear=clear">æ¸…ç©ºè´­ç‰©è½¦</a></strong>
 <%
 } else {
 %>
 
-<font size="+2">ÄúµÄ¹ºÎï³µÄ¿Ç°Îª¿Õ</font>
+<font size="+2">æ‚¨çš„è´­ç‰©è½¦ç›®å‰ä¸ºç©º</font>
 <br>&nbsp;<br>
-<a href="<%=request.getContextPath()%>/catalog.jsp">¼ÌĞø¹ºÎï</a>
+<a href="<%=request.getContextPath()%>/catalog.jsp">ç»§ç»­è´­ç‰©</a>
 
 <%
   // End of if

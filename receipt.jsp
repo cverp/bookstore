@@ -1,10 +1,12 @@
-<%@ page contentType="text/html; charset=GB2312" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 
 <%@ include file="common.jsp" %>
 <%@ page import="java.util.*" %>
 
-<jsp:useBean id="cart" scope="session" class="mypack.ShoppingCart"/>
-
+<html>
+<head><title>TitleReceipt</title>
+</head>
+<%@ include file="banner.jsp" %>
 <%
 	if(cart.getLogined()==0) {
 		%>
@@ -20,10 +22,8 @@
 %>
 <html>
 <head><title>TitleReceipt</title>
-<%@ include file="banner.jsp" %>
 </head>
 
-
-<h3><%=request.getParameter("cardname")%>£ºÐ»Ð»Äú¹âÁÙÐÂÊÀ¼ÍÍøÉÏÊéµê¡£</h3><br>
-<strong><a href="<%=request.getContextPath()%>/bookstore.jsp">¼ÌÐø¹ºÎï</a>&nbsp;&nbsp;&nbsp;</strong>
+<h3><%=request.getParameter("cardname")%>ï¼šè°¢è°¢æ‚¨å…‰ä¸´æ–°ä¸–çºªç½‘ä¸Šä¹¦åº—ã€‚</h3><br>
+<strong><a href="<%=request.getContextPath()%>/bookstore.jsp">ç»§ç»­è´­ç‰©</a>&nbsp;&nbsp;&nbsp;</strong>
  </body></html>

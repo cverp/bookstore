@@ -1,6 +1,7 @@
-<%@ page contentType="text/html; charset=GB2312" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ include file="common.jsp" %>
 <%@ page import="java.util.*" %>
+<%@ page import="mypack.*" %>
 
 <html>
 <head><title>TitleBookDescription</title></head>
@@ -17,22 +18,22 @@
    if(book==null)
    { 
 %>
-    <p>ÊéºÅ"<%=bookId%>"ÔÚÊý¾Ý¿âÖÐ²»´æÔÚ<p>
-    <strong><a href="<%=request.getContextPath()%>/catalog.jsp">¼ÌÐø¹ºÎï</a></strong>
+    <p>ä¹¦å·"<%=bookId%>"åœ¨æ•°æ®åº“ä¸­ä¸å­˜åœ¨<p>
+    <strong><a href="<%=request.getContextPath()%>/catalog.jsp">ç»§ç»­è´­ç‰©</a></strong>
 <% 
      return;
    }
 %>
 
-<p>ÊéÃû£º<%=convert(book.getTitle())%></p>
-×÷Õß: <em><%=convert(book.getName())%> </em>&nbsp;&nbsp;
+<p>ä¹¦åï¼š<%=convert(book.getTitle())%></p>
+ä½œè€…: <em><%=convert(book.getName())%> </em>&nbsp;&nbsp;
 (<%=book.getYear()%>)<br>
-<p>¼Û¸ñ£¨Ôª£©£º<%=book.getPrice()%></p>
-<p>ÏúÊÛÊýÁ¿£º<%=book.getSaleAmount()%></p>
-<p>ÆÀÂÛ£º<%=convert(book.getDescription())%></p>
+<p>ä»·æ ¼ï¼ˆå…ƒï¼‰ï¼š<%=book.getPrice()%></p>
+<p>é”€å”®æ•°é‡ï¼š<%=book.getSaleAmount()%></p>
+<p>ç®€ä»‹ï¼š<%=convert(book.getDescription())%></p>
 
 
-<p><strong><a href="<%=request.getContextPath()%>/catalog.jsp?Add=<%=bookId%>">¼ÓÈë¹ºÎï³µ</a>&nbsp; &nbsp; &nbsp;
-<a href="<%=request.getContextPath()%>/catalog.jsp">¼ÌÐø¹ºÎï</a></p></strong>
+<p><strong><a href="<%=request.getContextPath()%>/catalog.jsp?Add=<%=bookId%>">åŠ å…¥è´­ç‰©è½¦</a>&nbsp; &nbsp; &nbsp;
+<a href="<%=request.getContextPath()%>/catalog.jsp">ç»§ç»­è´­ç‰©</a></p></strong>
 </body>
 </html>

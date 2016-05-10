@@ -5,5 +5,7 @@
   'http://java.sun.com/j2ee/dtds/web-app_2_3.dtd'>
 
 <web-app>
-
+	<welcome-file-list>
+		<welcome-file>bookstore.jsp</welcome-file>
+	</welcome-file-list>
 </web-app>

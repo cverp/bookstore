@@ -1,9 +1,11 @@
-<%@ page contentType="text/html; charset=GB2312" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 
 <%@ include file="common.jsp" %>
 <%@ page import="java.util.*" %>
-
-<jsp:useBean id="cart" scope="session" class="mypack.ShoppingCart"/>
+<%@ page import="mypack.*" %>
+<html>
+<head><title>BookCatalog</title></head>
+ <%@ include file="banner.jsp" %>
 
 <%
 	if(cart.getLogined()==0) {
@@ -13,9 +15,6 @@
 	}
 %>
 
-<html>
-<head><title>BookCatalog</title></head>
- <%@ include file="banner.jsp" %>
 
 <%
   // Additions to the shopping cart
@@ -26,20 +25,20 @@
 %>
 <p><h3>
 <font color="red">
-ÄúÒÑ½« <i><%=convert(book.getTitle())%></i> ¼ÓÈë¹ºÎï³µ</font></h3>
+æ‚¨å·²å°† <i><%=convert(book.getTitle())%></i> åŠ å…¥è´­ç‰©è½¦</font></h3>
 <%
 }
 if (cart.getNumberOfItems() > 0) {
 %>
 
-<p><strong><a href="<%=request.getContextPath()%>/showcart.jsp">²ì¿´¹ºÎï³µ</a>&nbsp;&nbsp;&nbsp;
-<a href="<%=request.getContextPath()%>/cashier.jsp">¸¶ÕË</a></p></strong>
+<p><strong><a href="<%=request.getContextPath()%>/showcart.jsp">å¯Ÿçœ‹è´­ç‰©è½¦</a>&nbsp;&nbsp;&nbsp;
+<a href="<%=request.getContextPath()%>/cashier.jsp">ä»˜è´¦</a></p></strong>
 
 <%
 }
 %>
 
-<h3>ÇëÑ¡ÔñÏë¹ºÂòµÄÊé£º</h3>
+<h3>è¯·é€‰æ‹©æƒ³è´­ä¹°çš„ä¹¦ï¼š</h3>
 
 <table>
 <%
@@ -59,11 +58,11 @@ if (cart.getNumberOfItems() > 0) {
 
 
 <td bgcolor="#ffffaa" rowspan=2>
-<a href="<%=request.getContextPath()%>/catalog.jsp?Add=<%=bookId%>">&nbsp;¼ÓÈë¹ºÎï³µ&nbsp;</a></td></tr>
+<a href="<%=request.getContextPath()%>/catalog.jsp?Add=<%=bookId%>">&nbsp;åŠ å…¥è´­ç‰©è½¦&nbsp;</a></td></tr>
 
 <tr>
 <td bgcolor="#ffffff">
-&nbsp;&nbsp;×÷Õß£º<em><%=convert(book.getName())%>&nbsp;
+&nbsp;&nbsp;ä½œè€…ï¼š<em><%=convert(book.getName())%>&nbsp;
 </em></td></tr>
 
 <% } %>
